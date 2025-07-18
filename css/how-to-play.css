@@ -1,0 +1,140 @@
+.how-to-play {
+  padding: var(--spacing-xxl) 0;
+  background: var(--white);
+}
+
+.how-to-play-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.how-to-play-image {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.how-to-play-image img {
+  width: 100%;
+  height: auto;
+  transition: transform var(--transition-normal);
+}
+
+.how-to-play-image:hover img {
+  transform: scale(1.05);
+}
+
+.instructions-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.instruction-step {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+  padding: var(--spacing-md);
+  background: var(--light-gray);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-normal);
+  border-left: 4px solid transparent;
+}
+
+.instruction-step:hover {
+  transform: translateX(10px);
+  border-left-color: var(--primary-color);
+  background: rgba(255, 107, 53, 0.1);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--gradient-primary);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-md);
+}
+
+.step-content h3 {
+  color: var(--dark-gray);
+  margin-bottom: var(--spacing-xs);
+  font-size: 1.3rem;
+}
+
+.step-content p {
+  color: var(--gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Traffic-themed step animations */
+.instruction-step:nth-child(1) .step-number {
+  background: var(--gradient-primary);
+  animation: trafficLight 3s infinite;
+}
+
+.instruction-step:nth-child(2) .step-number {
+  background: var(--gradient-secondary);
+  animation: trafficLight 3s infinite 1s;
+}
+
+.instruction-step:nth-child(3) .step-number {
+  background: var(--gradient-accent);
+  animation: trafficLight 3s infinite 2s;
+}
+
+.instruction-step:nth-child(4) .step-number {
+  background: var(--gradient-warning);
+  animation: trafficLight 3s infinite 3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .how-to-play-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .instruction-step {
+    padding: var(--spacing-sm);
+  }
+
+  .step-number {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .step-content h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-to-play {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .instructions-grid {
+    gap: var(--spacing-md);
+  }
+
+  .instruction-step {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+  }
+
+  .step-number {
+    align-self: center;
+  }
+}

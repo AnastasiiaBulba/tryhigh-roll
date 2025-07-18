@@ -1,0 +1,221 @@
+/* Game Overview Section */
+.game-overview {
+  padding: var(--spacing-xxl) 0;
+  background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+}
+
+.overview-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.overview-image {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.overview-image img {
+  width: 100%;
+  height: auto;
+  transition: transform var(--transition-normal);
+}
+
+.overview-image:hover img {
+  transform: scale(1.05);
+}
+
+.overview-text h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.8rem;
+}
+
+.overview-text p {
+  color: var(--gray);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.8;
+}
+
+.overview-features {
+  list-style: none;
+  padding: 0;
+}
+
+.overview-features li {
+  padding: var(--spacing-sm) 0;
+  color: var(--dark-gray);
+  font-weight: 500;
+  position: relative;
+  padding-left: var(--spacing-lg);
+}
+
+.overview-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Features Section */
+.features {
+  padding: var(--spacing-xxl) 0;
+  background: var(--white);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.feature-card {
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  display: block;
+  animation: trafficLight 3s infinite;
+}
+
+.feature-card h3 {
+  color: var(--dark-gray);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.4rem;
+}
+
+.feature-card p {
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* Game Modes Section */
+.game-modes {
+  padding: var(--spacing-xxl) 0;
+  background: linear-gradient(135deg, var(--asphalt) 0%, var(--road-gray) 100%);
+  color: var(--white);
+}
+
+.game-modes .section-title {
+  color: var(--white);
+  -webkit-text-fill-color: var(--white);
+}
+
+.game-modes .section-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.mode-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+}
+
+.mode-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--primary-color);
+}
+
+.mode-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  display: block;
+  animation: trafficLight 2s infinite;
+}
+
+.mode-card h3 {
+  color: var(--white);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.4rem;
+}
+
+.mode-card p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .overview-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .features-grid,
+  .modes-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .feature-card,
+  .mode-card {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .game-overview,
+  .features,
+  .game-modes {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .overview-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .feature-icon,
+  .mode-icon {
+    font-size: 2.5rem;
+  }
+}

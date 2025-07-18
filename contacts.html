@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Get support and contact the Drive.IO traffic control game team. Get in touch with our traffic management studio for help, feedback, or collaboration opportunities. We're here to help you with your intersection control experience and answer any questions about our traffic simulation game."
+    />
+    <meta
+      name="keywords"
+      content="Drive.IO support, traffic control help, intersection management support, traffic simulation help, customer support, feedback, collaboration"
+    />
+    <meta name="author" content="tryhigh-roll.com" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Drive.IO: Support & Contact - Traffic Management Studio"
+    />
+    <meta
+      property="og:description"
+      content="Get support and contact the Drive.IO traffic control game team. Get in touch with our traffic management studio for help, feedback, or collaboration opportunities."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tryhigh-roll.com/contacts.html" />
+    <meta property="og:image" content="./depictions_car/icon500.jpg" />
+    <title>Tryhigh-roll.com - Drive.IO Support</title>
+    <link rel="icon" type="image/x-icon" href="./depictions_car/icon500.jpg" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/cookie-banner.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+      <div class="container">
+        <h1 class="contact-hero-title">Support & Contact</h1>
+        <p class="contact-hero-subtitle">
+          Have questions about Drive.IO? We're here to help with your traffic
+          management experience!
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Contact Information -->
+          <div class="contact-info-card">
+            <h2>Contact Information</h2>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-text">
+                  <h3>Email</h3>
+                  <a href="mailto:info@tryhigh-roll.com"
+                    >info@tryhigh-roll.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-text">
+                  <h3>Phone</h3>
+                  <a href="tel:+1-403-767-5555">+1 (403) 767-5555</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-text">
+                  <h3>Address</h3>
+                  <p>
+                    67 Main Street, Vancouver, British Columbia V5K 0A1, Canada
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card">
+            <h2>Send us a Message</h2>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="container">
+        <h2>Find Us</h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20064.8251908!2d-123.1207!3d49.2827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486718c2b1a5883%3A0xbbf6cd786bd42b5b!2sVancouver%2C%20BC%2C%20Canada!5e0!3m2!1sen!2sca!4v1640995200000!5m2!1sen!2sca"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+      <div class="cookie-content">
+        <p>
+          🚦 We use cookies to enhance your Drive.IO experience. By continuing
+          to use this site, you agree to our use of cookies for traffic
+          optimization and game performance.
+        </p>
+        <div class="cookie-buttons">
+          <button class="btn btn-primary" onclick="acceptCookies()">
+            <span class="cookie-icon">🚦</span>Accept
+          </button>
+          <a href="./cookie-policy.html" class="cookie-link">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/builder.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/cookie-banner.js"></script>
+    <script src="./js/footer-loader.js"></script>
+
+    <script>
+      // Phone number validation
+      document.addEventListener("DOMContentLoaded", function () {
+        const phoneInput = document.getElementById("phone");
+
+        phoneInput.addEventListener("input", function (e) {
+          // Remove all non-digit characters
+          let value = e.target.value.replace(/\D/g, "");
+
+          // Limit to 15 digits
+          if (value.length > 15) {
+            value = value.slice(0, 15);
+          }
+
+          // Update input value
+          e.target.value = value;
+        });
+
+        // Prevent paste of non-digit characters
+        phoneInput.addEventListener("paste", function (e) {
+          e.preventDefault();
+          const pastedText = (e.clipboardData || window.clipboardData).getData(
+            "text"
+          );
+          const digitsOnly = pastedText.replace(/\D/g, "");
+
+          if (digitsOnly.length > 15) {
+            this.value = digitsOnly.slice(0, 15);
+          } else {
+            this.value = digitsOnly;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
